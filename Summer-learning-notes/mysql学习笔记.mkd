@@ -1,0 +1,30 @@
+#mysql 命令
+
+&deg; 创建数据库 CREATE DATABASE name;archar
+
+&deg; 选择需要操作的数据库 USE dbname; -> show dbname;(先使用再查看)
+
+&deg; 删除数据库 DORP DATABASE dbname; 
+
+&deg; 在数据库中创建一张表CREATE TABLE tablename(name1 type1 constraints,name2 type2 constraints(约束条件)...)
+
+&deg; 创建后查看表 DESC&nbsp;&nbsp;&nbsp;tablename
+
+&deg; 查询建表的SQL语句  &nbsp;SHOW &nbsp;CREATE &nbsp;TABLE &nbsp;name \G;
+
+&deg; 删除表 DROP TABLE tablename
+
+&deg; 修改表 ALTER TABLE tablename MODIFY[COLUMN]
+column_definition[FIRST|AFTER col_name]
+<br>eg:修改表emp的ename字段定义,将varchar(10)改为varchar(20)
+<br>ALTER TABLE emp MODIFY ename varchar(20) 
+ 
+&deg; 添加 ALTER TABLE table_name ADD name type [+位置(eg:after ename 或者 first ,一般默认加在最后)]
+
+&deg; 删除 ALTER TABLE table_name DORP name
+
+&deg; 字段改名 ALTER TABLE table_name CHANGE old_name new_name new_type
+
+&deg; CHANGE 和 MODIFY 都可以修改表的定义,不同的是CHANGE后面需要写两次列名,不方便.但是CHANGE的优点是可以修改列的名称,MODIFY不能
+
+&deg; 更改表名 ALTER TABLE table_name REMANE new_table_name
